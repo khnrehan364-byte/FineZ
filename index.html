@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>FineZ - Play, Earn & Stay Fit</title>
+
+<style>
+
+.search-bar{
+text-align:center;
+margin-top:15px;
+}
+
+.search-bar input{
+width:60%;
+padding:12px;
+border-radius:25px;
+border:none;
+outline:none;
+font-size:16px;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+margin:0;
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:white;
+}
+
+.trending{
+text-align:center;
+color:white;
+margin-top:40px;
+}
+
+.container{
+column-count:3;
+column-gap:30px;
+padding:40px;
+break-inside: avoid;
+margin-bottom: 30px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+transition:0.3s;
+margin-bottom:30px;
+break-inside:avoid;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.25);
+}
+
+.card img{
+width:100%;
+height:auto;
+display:block;
+transition:0.4s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+.card h2{
+font-size:18px;
+margin:15px;
+}
+
+.card p{
+font-size:14px;
+color:#555;
+margin: 0 15px 15px;
+}
+
+.buttons{
+margin-top:15px;
+}
+
+button{
+background:#ff7a5c;
+border:none;
+color:white;
+padding:12px 25px;
+border-radius:25px;
+cursor:pointer;
+font-weight:600;
+transition:0.3s;
+}
+
+button:hover{
+background:#ff5a3c;
+transform:scale(1.05);
+}
+
+footer{
+background:#111;
+color:#bbb;
+text-align:center;
+padding:20px;
+font-size: 13px;
+}
+
+@media (max-width:1000px){
+  .container{
+    column-count:2;
+}
+}
+
+@media (max-width:600px){
+  .container{
+    column-count:1;
+}
+}
+
+header{
+background: rgba(0,0,0,0.3);
+backdrop-filter: blur(10px);
+padding:25px 40px;
+color:white;
+}
+
+header h1{
+margin:0;
+font-size:28px;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-right:25px;
+font-weight:500;
+font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff7e5f;
+}
+
+.hero{
+text-align:center;
+padding:80px 20px;
+color:white;
+}
+
+.hero h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+.card-buttons{
+display:flex;
+gap:10px;
+padding:15px;
+}
+
+.save{
+background:#444;
+color: white;
+}
+
+.save:hover{
+background:#222;
+}
+
+.upload{
+text-align:center;
+margin:40px;
+color:white;
+}
+
+.upload input{
+margin:10px;
+}
+
+.upload button{
+background:#ff4d4d;
+padding:10px 20px;
+border:none;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+
+.upload-box{
+background:#fff;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+.upload-box input,
+.upload-box textarea{
+width:100%;
+margin:8px 0;
+padding:8px;
+}
+
+.card{
+background:#fff;
+padding:10px;
+border-radius:10px;
+margin-bottom:15px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+padding-bottom:15px;
+}
+
+.card-actions{
+display:flex;
+gap:10px;
+justify-content:center;
+margin-top:10px;
+}
+
+.card-actions button{
+padding:8px 14px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:#f1f1f1;
+font-size:14px;
+}
+
+.card-actions button:hover{
+background:#ddd;
+}
+
+.card-actions{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.card-actions{
+display:flex;
+gap:10px;
+padding:10px;
+justify-content:center;
+}
+
+.card-actions button{
+border:none;
+background:#ffffff;
+padding:6px 12px;
+border-radius:6px;
+cursor:pointer;
+font-size:14px;
+}
+
+.card-actions button{
+padding:6px 12px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+background:#f2f2f2;
+}
+
+.card-actions button:hover{
+background:#ddd;
+}
+
+.card h2{
+color:#000;
+}
+
+.card p{
+color:#444;
+}
+
+</style>
+</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<body>
+
+<header>
+<h1>FineZ</h1>
+<p>Play • Earn • Stay Fit</p>
+</header>
+
+<div class="search-bar">
+<input type="text" placeholder="Search earning ideas...">
+
+<nav>
+<a href="#">Home</a>
+<a href="#">AI Money</a>
+<a href="#">Side Hustles</a>
+<a href="#">Play & Earn</a>
+<a href="#">Creator Income</a>
+<a href="#">Fitness Rewards</a>
+<a href="#">About</a>
+</nav>
+
+<section class="hero">
+<h2>Welcome to FineZ</h2>
+<p>Play Games • Earn Money • Stay Fit</p>
+<button>Start Exploring</button>
+</section>
+
+<section class="trending">
+<h2>🔥 Trending Ways to Earn</h2>
+</section>
+
+<section class="upload">
+
+<h2>Upload Your Post</h2>
+
+<input type="file" id="fileInput" accept="image/*" onchange="showFields()">
+
+<div id="postFields" style="display:none;">
+
+<input type="text" id="titleInput" placeholder="Enter post title">
+
+<textarea id="descInput" placeholder="Write description"></textarea>
+
+<button onclick="addPost()">Post</button>
+
+</div>
+
+</section>
+
+<div class="container">
+
+<!-- Your cards here -->
+
+  <!-- Gaming Card -->
+  <div class="card">
+<img src="gaming.jpg" alt="Play to Earn Games" width="100%">
+<h2>Top Play-to-Earn Games</h2>
+<p>Discover games that allow players to earn real money while playing.</p>
+
+   <div class="card-buttons">
+<button>Explore</button>
+<button class="save">Save</button>
+  </div>
+
+  <!-- AI Card -->
+  <div class="card">
+    <img src="earning.jpg" alt="Earning Apps" width="100%">
+    <h2>Best AI Tools to Make Money</h2>
+    <p>Discover powerful AI tools that help people earn online.</p>
+    <div class="card-buttons">
+      <button>Explore</button>
+      <button class="save">Save</button>
+    </div>
+  </div>
+
+  <!-- Fitness Card -->
+  <div class="card">
+    <img src="fitness.jpg" alt="Fitness Apps" width="100%">
+    <h2>Apps That Pay You to Walk</h2>
+    <p>Stay fit and earn rewards using health and walking apps.</p>
+    <div class="card-buttons">
+      <button>Explore</button>
+      <button class="save">Save</button>
+    </div>
+  </div>
+
+</div> <!-- Close .container -->
+
+<footer>
+  <p>© 2026 FineZ Blog</p>This page contains affiliate links. We may earn a commission for purchases made through these links at no additional cost to you.
+</footer>
+
+
+<script>
+
+  function showFields(){
+document.getElementById("postFields").style.display = "block";
+}
+
+firebase.initializeApp(firebaseConfig);
+
+const storage = firebase.storage();
+
+function addPost(){
+
+const file = document.getElementById("fileInput").files[0];
+const title = document.getElementById("titleInput").value;
+const desc = document.getElementById("descInput").value;
+
+if(!file){
+alert("Select an image first");
+return;
+}
+
+const storageRef = ref(storage, 'posts/' + file.name);
+
+uploadBytes(storageRef, file).then(() => {
+
+getDownloadURL(storageRef).then((url) => {
+
+const container = document.querySelector(".container");
+
+const card = document.createElement("div");
+card.className = "card";
+
+const img = document.createElement("img");
+img.src = url;
+img.width = "100%";
+
+const titleEl = document.createElement("h2");
+titleEl.innerText = title;
+
+const descEl = document.createElement("p");
+descEl.innerText = desc;
+
+const shared = document.createElement("p");
+shared.innerText = "Shared by FineZ community";
+shared.style.color = "gray";
+shared.style.fontSize = "12px";
+actions.className = "card-actions";
+
+const likeBtn = document.createElement("button");
+likeBtn.innerText = "❤️ Like";
+likeBtn.onclick = function(){
+if(likeBtn.innerText === "❤️ Like"){
+likeBtn.innerText = "❤️ Liked";
+}else{
+likeBtn.innerText = "❤️ Like";
+}
+};
+
+const shareBtn = document.createElement("button");
+shareBtn.innerText = "🔗 Share";
+shareBtn.onclick = function(){
+navigator.clipboard.writeText(window.location.href);
+alert("Post link copied!");
+};
+
+const saveBtn = document.createElement("button");
+saveBtn.innerText = "💾 Save";
+
+actions.appendChild(likeBtn);
+actions.appendChild(shareBtn);
+actions.appendChild(saveBtn);
+
+card.appendChild(img);
+card.appendChild(titleEl);
+card.appendChild(descEl);
+card.appendChild(shared);
+card.appendChild(actions);
+
+container.prepend(card);
+
+}); // End getDownloadURL
+}); // End uploadBytes
+} // End addPost
+
+</script>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.10.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyALv7HkYo_5MJsNQOmD6ZiQMJ-TV7RR1VQ",
+    authDomain: "finez-8c69b.firebaseapp.com",
+    projectId: "finez-8c69b",
+    storageBucket: "finez-8c69b.firebasestorage.app",
+    messagingSenderId: "972278293853",
+    appId: "1:972278293853:web:52329b1a04b1ad3258b4b4"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+
+</body>
+</html>
