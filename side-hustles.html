@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Side Hustles - FineZ</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:black;
+color:white;
+}
+
+/* 3D BACKGROUND */
+
+#vanta-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* NAVBAR */
+
+header{
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(12px);
+padding:25px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:500;
+}
+
+nav a:hover{
+color:#ff4f81;
+}
+
+/* TITLE */
+
+.title{
+text-align:center;
+margin-top:40px;
+font-size:32px;
+}
+
+/* PINTEREST LAYOUT */
+
+.container{
+max-width:1400px;
+margin:auto;
+padding:40px;
+column-count:4;
+column-gap:20px;
+}
+
+.card{
+break-inside:avoid;
+margin-bottom:20px;
+background:white;
+color:black;
+border-radius:14px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+box-shadow:0 25px 50px rgba(0,0,0,0.7);
+}
+
+.card img{
+width:100%;
+}
+
+.card h3{
+padding:10px;
+}
+
+.card p{
+padding:0 10px 10px;
+}
+
+.card button{
+margin:10px;
+padding:8px 16px;
+border:none;
+border-radius:20px;
+background:#ff4f81;
+color:white;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+@media(max-width:1200px){.container{column-count:3}}
+@media(max-width:800px){.container{column-count:2}}
+@media(max-width:500px){.container{column-count:1}}
+
+</style>
+</head>
+
+<body>
+
+<div id="vanta-bg"></div>
+
+<header>
+
+<h1>FineZ</h1>
+<p>Play • Earn • Stay Fit</p>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="ai-money.html">AI Money</a>
+<a href="side-hustles.html">Side Hustles</a>
+<a href="play-earn.html">Play & Earn</a>
+<a href="fitness.html">Fitness Rewards</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+<h2 class="title">Best Side Hustles</h2>
+
+<div class="container">
+
+<div class="card">
+<img src="https://picsum.photos/300/200?11">
+<h3>Affiliate Marketing</h3>
+<p>Promote products and earn commissions online.</p>
+<button>Explore</button>
+</div>
+
+<div class="card">
+<img src="https://picsum.photos/300/200?12">
+<h3>Freelancing</h3>
+<p>Earn money by offering skills online.</p>
+<button>Explore</button>
+</div>
+
+</div>
+
+<footer>
+© 2026 FineZ Blog  
+This page contains affiliate links. We may earn a commission.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.fog.min.js"></script>
+
+<script>
+
+VANTA.FOG({
+el:"#vanta-bg",
+highlightColor:0xff4f81,
+midtoneColor:0x222222,
+lowlightColor:0x000000,
+baseColor:0x000000
+})
+
+const container=document.querySelector(".container")
+
+window.addEventListener("scroll",()=>{
+
+if(window.innerHeight+window.scrollY>=document.body.offsetHeight-200){
+
+for(let i=0;i<4;i++){
+
+const card=document.createElement("div")
+card.className="card"
+
+card.innerHTML=`
+<img src="https://picsum.photos/300/200?random=${Math.random()}">
+<h3>New Hustle Idea</h3>
+<p>Discover new side hustles to make money online.</p>
+<button>Explore</button>
+`
+
+container.appendChild(card)
+
+}
+
+}
+
+})
+
+</script>
+
+</body>
+</html>
